@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Arrows</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="arrows.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1 class="title">ARR<span>O</span>WS</h1>
+      <p class="tagline">clear the board, one path at a time</p>
+      <div class="stats">
+        <div class="stat">
+          <span class="label">Level</span>
+          <span class="value" id="stat-level">1</span>
+        </div>
+        <div class="stat">
+          <span class="label">Remaining</span>
+          <span class="value" id="stat-remaining">0</span>
+        </div>
+        <div class="stat">
+          <span class="label">Score</span>
+          <span class="value" id="stat-score">0</span>
+        </div>
+        <div class="stat">
+          <span class="label">Lives</span>
+          <div class="lives" id="lives"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="board-wrap">
+      <div class="board" id="board" style="--cols:6; --rows:8;"></div>
+    </div>
+
+    <p class="hint">Tap a path to send it flying off the board. It only escapes if <b>the runway past its arrowhead is empty</b> — if it hits another path, you lose a life.</p>
+  </div>
+
+  <div class="overlay" id="overlay">
+    <div class="card">
+      <h2 id="card-title">Arrows</h2>
+      <p id="card-sub">Clear every path off the board without a single collision. Boards get denser as you go.</p>
+      <div class="big-num" id="card-num" style="display:none;"></div>
+      <button class="cta" id="card-btn">Play</button>
+    </div>
+  </div>
+
+<script src="arrows.js"></script>
+</body>
+</html>
